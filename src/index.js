@@ -1,13 +1,32 @@
-import React from 'react';
+import  React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+// react-router
+import {BrowserRouter} from "react-router-dom" 
+//
+// redux
+import store from './redux/Index';
+import { Provider } from 'react-redux'
+//
+// redux-persist
+import { PersistGate } from 'redux-persist/integration/react'
+import {persistor} from './redux/Index'
+//
+// bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+//
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <App />
+      </PersistGate>
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

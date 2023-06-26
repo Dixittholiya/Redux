@@ -1,0 +1,59 @@
+
+  #login{
+    margin:0;
+    padding: 1px 0 40px 0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+    text-align: center;
+    // position: relative;
+    // top: -22px;
+    .form{
+        .title{
+            color: #fff;
+            margin-bottom: 117px;
+            padding-top: 50px;
+        }
+        .email{
+            .labelEmail{
+                position: relative;
+                top: -50px;
+                left: 16%;
+                color: #fff;
+            }
+            .emailInput{
+                width: 30%;
+                padding: 10px 0;
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 30px;
+                border: none;
+                border-bottom: 1px solid #fff;
+                outline: none;
+                background: transparent;
+            }
+        }
+        .Password{
+            margin: 57px 0 4px 0;
+            .labelPassword{
+                position: relative;
+                top: -50px;
+                left: 16%;
+                color: #fff;
+            }
+            .PasswordInput{
+                width: 30%;
+                padding: 10px 0;
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 30px;
+                border: none;
+                border-bottom: 1px solid #fff;
+                outline: none;
+                background: transparent;
+                position: relative;
+                right: 17px;
+            }
+        }
+    }
+  }
+  

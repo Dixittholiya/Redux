@@ -1,0 +1,10 @@
+#Product{
+    .showCard{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .class{
+            margin-top: 100px;
+        }
+    }
+}

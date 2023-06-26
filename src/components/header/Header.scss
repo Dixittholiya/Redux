@@ -1,0 +1,23 @@
+#header{
+    background-color: #222222;
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+
+    .headerList{
+        .headerUl{
+            list-style: none;
+            display: flex;
+            // margin-left: 100px;
+            justify-content: center;
+        }
+        .headerUl li {
+            margin-left: 100px;
+        }
+        .headerUl li Button{
+            // border: none;
+        }
+        .headerUl li button:hover{
+            color: #06bdff;
+        }
+    }
+}
