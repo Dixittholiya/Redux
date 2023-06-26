@@ -55,14 +55,14 @@ const Product = () => {
           {
             showData&&
             showData.map((item)=>(
-              // <Cards item={item}/>
-              <Card
-                hoverable
-                style={{ width: 300,margin:20 }}
-                cover={<img alt="example" src={item.image} className='class'/>}
-                >
-                <Meta title={"Price $ "+item.price} description={"category : "+item.category} />
-              </Card>
+              <Cards item={{item}}/>
+              // <Card
+              //   hoverable
+              //   style={{ width: 300,margin:20 }}
+              //   cover={<img alt="example" src={item.image} className='class'/>}
+              //   >
+              //   <Meta title={"Price $ "+item.price} description={"category : "+item.category} />
+              // </Card>
             ))
           }
         </div>
