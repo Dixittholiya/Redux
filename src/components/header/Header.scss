@@ -8,10 +8,11 @@
             list-style: none;
             display: flex;
             // margin-left: 100px;
-            justify-content: center;
+            justify-content: space-evenly;
+            margin-top: 10px;
         }
         .headerUl li {
-            margin-left: 100px;
+            // margin-left: 100px;
         }
         .headerUl li Button{
             // border: none;

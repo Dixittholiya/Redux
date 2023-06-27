@@ -1,77 +1,85 @@
 #singup{
-    text-align: -webkit-center;
-    .title{
-        margin-bottom: 70px;
-    }
-    .singupForm{
-        width: 70%;
-        margin: 20px 0 30px 0;
-        padding: 40px 0 40px 0;
-        border: 1px solid red;
-        box-shadow: 5px 5px 16px black;
-        
-        .firstAndLastNamelabel{
-            display: flex;
-            justify-content: space-around;
-            .firstNameLabel{
-                margin-left: 70px;
+    .first-div{
+        background-color: #f0f0f0d3;
+        width: 100%;
+        height: 100%;
+        padding: 50px 0 50px 0;
+        .second-div{
+            background-color: white;
+            width: 70%;
+            height: 70%;
+            text-align: center;
+            margin: 50px auto 50px auto;
+            border: 3px solid rgb(219, 219, 219);
+            box-shadow: 10px 10px 10px #adaaaa;
+            padding: 39px 0 80px 0;
+            .title{
+                text-align: center;
+                margin-bottom: 40px;
             }
-            .lastNameLabel{
-                margin-right: 111px;
+            .firstNameAndLastName{
+                margin-top: 20px;
+                .firstAndLastLabel{
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .firstAndLastInput{
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin: 16px 17px 16px 16px;
+                    .firstNameInput{
+                        margin-right: 5px;
+                    }
+                    .lastnameInput{
+                        margin-left: 5px;
+                    }
+                }
             }
-        }
-        .firstAndLastNameInput{
-            display: flex;
-            justify-content: space-around;
-            width: 77%;
-            .firstNameInput{
-                margin-right: 10px;
-            }
-        }
 
-        .emailAndUserNamelabel{
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-            .emailLabel{
-                margin-left: 70px;
+            .emailAndUserName{
+                margin-top: 40px;
+                .emailAndUserNameLabel{
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .emailAndUserNameInput{
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin: 16px 17px 16px 16px;
+                    .emailAddressInput{
+                        margin-right: 5px;
+                    }
+                    .userNameInput{
+                        margin-left: 5px;
+                    }
+                }
             }
-            .UserNameLabel{
-                margin-right: 111px;
-            }
-        }
-        .emailAndUserNameInput{
-            display: flex;
-            justify-content: space-around;
-            width: 77%;
-            .emailInput{
-                margin-right: 10px;
-            }
-        }
 
-        .passwordAndConformPassword{
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-            .passwordLabel{
-                margin-left: 70px;
+            .passwordAndConformPassword{
+                margin-top: 40px;
+                .passwordAndConformPasswordLabel{
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .passwordAndConformPasswordInput{
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin: 16px 17px 16px 16px;
+                    .passwordInput{
+                        margin-right: 5px;
+                    }
+                    .conformPasswordInput{
+                        margin-left: 5px;
+                    }
+                }
             }
-            .conformPasswordLabel{
-                margin-right: 111px;
-            }
-        }
-        .passwordAndConformPasswordInput{
-            display: flex;
-            justify-content: space-around;
-            width: 77%;
-            .passwordInput{
-                margin-right: 10px;
-            }
-        }
-        .submitButton{
+
             .submitButton{
-                margin-top: 30px;
-                padding: 0 20px 0 20px;
+                .submitButton{
+                    margin-top: 35px;
+                    font-size: 20px;
+                    padding: 5px 24px 38px 24px;
+                }
             }
         }
     }

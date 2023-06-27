@@ -19,10 +19,9 @@ const Forms = () => {
   })
 
   useEffect(() => {
-    console.log("myState");
+    // console.log("myState");
     const find = myState.list.filter(x => x.id === myState.edittId)
       if (find.length >= 1) {
-        console.log("form filter find : ",find);
         setForm(find[0])
       }
   }, [myState.edittId !== null])
@@ -32,7 +31,7 @@ const Forms = () => {
     setForm({...form,[e.target.name]:e.target.value});
   }
   const submitHandler = () => {
-    console.log("form : ",form);
+    // console.log("form : ",form);
     dispatch((addTodoList(form)))
     setForm("")
   }

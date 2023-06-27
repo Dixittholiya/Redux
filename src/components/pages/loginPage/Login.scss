@@ -1,59 +1,55 @@
-
-  #login{
-    margin:0;
-    padding: 1px 0 40px 0;
-    font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
-    text-align: center;
-    // position: relative;
-    // top: -22px;
-    .form{
-        .title{
-            color: #fff;
-            margin-bottom: 117px;
-            padding-top: 50px;
-        }
-        .email{
-            .labelEmail{
-                position: relative;
-                top: -50px;
-                left: 16%;
-                color: #fff;
+#login{
+    // background-color: red;/
+    // background-color: rgb(230, 230, 230);
+    // height: 100%;
+    // width: 100%;
+    .man-div{
+        // background-color: #f5f5f5;
+        background-color: #f0f0f0d3;
+        width: 100%;
+        height: 100%;
+        padding: 1px 0 1px 0;
+        .child-div{
+            background-color: white;
+            width: 70%;
+            height: 70%;
+            text-align: center;
+            margin: 50px auto 50px auto;
+            border: 3px solid rgb(219, 219, 219);
+            box-shadow: 10px 10px 10px #adaaaa;
+            padding: 40px 0 80px 0;
+            .page-title{
+                margin-bottom: 40px;
             }
-            .emailInput{
-                width: 30%;
-                padding: 10px 0;
-                font-size: 16px;
-                color: #fff;
-                margin-bottom: 30px;
-                border: none;
-                border-bottom: 1px solid #fff;
-                outline: none;
-                background: transparent;
+            .email{
+                .labelEmail{
+                    font-size: 20PX;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .emailInput{
+                    width: 50%;
+                    margin-bottom: 20px;
+                }
             }
-        }
-        .Password{
-            margin: 57px 0 4px 0;
-            .labelPassword{
-                position: relative;
-                top: -50px;
-                left: 16%;
-                color: #fff;
+            .Password{
+                .labelPassword{
+                    font-size: 20PX;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .PasswordInput{
+                    width: 50%;
+                    margin-bottom: 20px;
+                }
             }
-            .PasswordInput{
-                width: 30%;
-                padding: 10px 0;
-                font-size: 16px;
-                color: #fff;
-                margin-bottom: 30px;
-                border: none;
-                border-bottom: 1px solid #fff;
-                outline: none;
-                background: transparent;
-                position: relative;
-                right: 17px;
+            .submitButton{
+                .submitButton{
+                    margin: 50px 0 50px 0;
+                    font-size: 20px;
+                    padding: 8px 25px 39px 25px;
+                }
             }
         }
     }
-  }
-  
+}

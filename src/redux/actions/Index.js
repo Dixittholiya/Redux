@@ -6,8 +6,8 @@ export const addTodoList = (data) => {
         type : "ADD_TODO_LIST",
         data:{
             ...data,
-            id: todoId
-        }
+            id: todoId,
+        },
     }
 }
 export const deleteList = (id) => {
