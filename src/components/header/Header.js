@@ -2,30 +2,33 @@ import React, { useEffect, useState } from 'react'
 import './Header.scss'
 import { Menu, } from 'antd'
 
-import { Link, useNavigate } from 'react-router-dom';
-import { Button } from 'antd';
+import { useNavigate } from 'react-router-dom';
 import { HomeOutlined, SolutionOutlined, FormOutlined, LoginOutlined, PoweroffOutlined } from '@ant-design/icons';
 import { GiLoincloth } from "react-icons/gi";
 import { FaWpforms } from "react-icons/fa";
 
+import { useDispatch, useSelector } from 'react-redux';
+import { removeUserData } from '../../redux/actions/userAction';
+
 const Header = () => {
+  const dispatch = useDispatch()
+  let myUserState = useSelector((state) => state.userdata.loginUserData.firstName)
 
   const [newDisabled, setNewDisabled] = useState(false)
   const [logoutDisabled, setLogoutDisabled] = useState(false)
   const navigate = useNavigate()
 
-  let userfirstName = localStorage.getItem('userFirstName');
   useEffect(() => {
 
-    if (userfirstName) {
+    if (myUserState) {
       setNewDisabled(true)
       setLogoutDisabled(false)
     }
-    if (userfirstName === null) {
+    if (myUserState === undefined) {
       setNewDisabled(false)
       setLogoutDisabled(true)
     }
-  }, [userfirstName])
+  }, [myUserState])
 
 
   return (
@@ -36,10 +39,9 @@ const Header = () => {
         onClick={(info) => {
           if (info.key === "/logout") {
             // navigate("/")
-            localStorage.removeItem("userFirstName")
-            setTimeout(() => {
-              window.location.reload();
-            }, 500);
+            // localStorage.removeItem("userFirstName")
+            dispatch(removeUserData(myUserState))
+
           }
           else {
             navigate(info.key)

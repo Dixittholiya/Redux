@@ -1,13 +1,17 @@
 import React from 'react'
 import './HomePage.scss'
+import { useSelector } from 'react-redux';
 
 const HomePage = () => {
+    let myUserState = useSelector((state) => state.userdata.loginUserData.firstName)
+    console.log("myUserState : ", myUserState);
     let userfirstName = localStorage.getItem('userFirstName');
     return (
         <div id='Home'>
             {/* <div className='div1'><h1 className='Color'>Home Page {userfirstName}</h1></div> */}
             {
-                userfirstName ? <h1 className='Color'>Hello {userfirstName}</h1> : null
+                myUserState ? <h1 className='Color'> Hello {myUserState}</h1> : null
+                // userfirstName ? <h1 className='Color'>Hello {userfirstName}</h1> : null
             }
             <div className='homePageImage'>
                 <img src="https://wallpapersprinted.com/download/2/jupiter_ferris_wheel_fair-wallpaper-1920x1080.jpg" className='Image' alt="" />

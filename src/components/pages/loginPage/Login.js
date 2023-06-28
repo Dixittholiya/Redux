@@ -3,13 +3,17 @@ import './Login.scss'
 import { Button, Space } from 'antd';
 import { Input } from "antd";
 import { useState } from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import { saveUserData } from '../../../redux/actions/userAction';
 
 const Login = () => {
-  const myState = useSelector((state) => state.userdata)
+  const dispatch = useDispatch()
   let navigate = useNavigate()
+
+  let myState = useSelector((state) => state.userdata.user)
+  console.log("mystate : ", myState);
 
   const [apiGetdata, setApiGetdata] = useState(null)
   const [login, setLogin] = useState({
@@ -24,19 +28,18 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    let find = myState.find(a => a.email === login.email);
+    console.log("find : ", find);
 
     axios.post("http://localhost:9000/users/user-login", login)
       .then((response) => {
         setApiGetdata(response.data)
 
-        localStorage.setItem('userFirstName', response.data.find.firstName);
+        // localStorage.setItem('userFirstName', response.data.find.firstName);
+        dispatch(saveUserData(find))
         alert("Login Successfull");
 
         navigate("/")
-
-        // setTimeout(() => {
-        //   window.location.reload();
-        // }, navigate);
 
       })
 
